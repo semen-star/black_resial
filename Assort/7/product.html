@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Черный Reseil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0a1a;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+    }
+
+    .back-button {
+      background-color: #229ED9;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #1d8bb8;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 30px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .product-images {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .product-images img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .product-info {
+      flex: 1;
+      min-width: 280px;
+      max-width: 500px;
+    }
+
+    .product-info h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .product-info p.price {
+      font-size: 24px;
+      color: #ffc107;
+      margin-bottom: 15px;
+    }
+
+    .product-info label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .product-info select {
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      margin-top: 5px;
+      width: 100%;
+    }
+
+    .product-info .sizes {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #eee;
+}
+
+
+    .product-info .description {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+      background-color: #0a0a1a;
+    }
+
+    @media (max-width: 768px) {
+      .product-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product-info h1 {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../logo.jpg" alt="Логотип" class="logo" />
+    <button class="back-button" onclick="location.href='../index.html'">← Назад</button>
+  </header>
+
+  <div class="product-container">
+    <div class="product-images">
+      <img src="1.jpg" alt="Фото товара 1">
+      <img src="2.jpg" alt="Фото товара 2">
+    </div>
+    <div class="product-info">
+      <h1>Наименование товара</h1>
+      <p class="price">Цена ₽</p>
+
+      <label>Размеры в наличии:</label>
+<p class="sizes">XS, S, M, L, XL</p>
+
+
+      <div class="description">
+        ОПИСАНИЕ.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Черный Reseil. Все права защищены.<br>
+    Не является публичной офертой. Актуальные цены и наличие уточняйте у сотрудников магазина.
+  </footer>
+
+</body>
+</html>
