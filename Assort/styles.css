@@ -1,0 +1,77 @@
+/* Тёмный фон */
+body.dark-bg {
+  background-color: #0a0a1a;
+  color: white;
+}
+
+
+/* Статичный логотип */
+.static-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: auto;
+}
+
+/* Кнопка "На главную" */
+.back-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #1c1c2e;
+  color: #ffffff;
+  border: 2px solid #444;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #2a2a3d;
+}
+
+/* Сетка товаров */
+.product-grid {
+  margin-top: 150px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: #ffffff10;
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.3s;
+  width: 250px;
+}
+
+.product-card:hover {
+  background-color: #ffffff20;
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #ccc;
+}
