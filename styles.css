@@ -1,55 +1,75 @@
- body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0a0a1a;
-      color: white;
-    }
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #0b0c1a; /* тёмно-синий */
+  color: white;
+  overflow-x: hidden;
+}
 
-    .logo {
-      display: block;
-      margin: 20px auto 10px;
-      width: 120px;
-      height: auto;
-    }
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20vh;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  opacity: 0;
+  animation: logoMove 2s ease-out forwards;
+}
 
-    .main-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 20px;
-      gap: 20px;
-    }
+@keyframes logoMove {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+}
 
-    .left-panel {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+.main-content.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
-    .button {
-      padding: 12px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      background-color: #444;
-      color: white;
-      text-align: center;
-    }
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
 
-    .button:hover {
-      background-color: #666;
-    }
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .telegram-button {
-      background-color: #229ED9;
-    }
+.button {
+  background-color: #1a1b2f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-    .telegram-button:hover {
-      background-color: #1a7fb2;
-    }
+.button:hover {
+  background-color: #2c2d4a;
+}
+
+.telegram-button {
+  background-color: #0088cc;
+}
 
 .map iframe {
   width: 100%;
@@ -58,7 +78,14 @@
   border-radius: 12px;
 }
 
-/* Для больших экранов (ПК) увеличиваем размер карты */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ПК-версия карты */
 @media (min-width: 1024px) {
   .map iframe {
     width: 600px;
@@ -66,37 +93,16 @@
   }
 }
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #aaa;
-    }
+/* Адаптация под телефон */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
-    @media (max-width: 768px) {
-      .main-content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .button {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .map iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
-  border-radius: 12px;
-}
-
-/* Для больших экранов (ПК) увеличиваем размер карты */
-@media (min-width: 1024px) {
-  .map iframe {
-    width: 600px;
-    height: 400px;
+  .logo {
+    width: 120px;
+    height: 120px;
   }
 }
-    }

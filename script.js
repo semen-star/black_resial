@@ -1,16 +1,9 @@
-window.addEventListener("DOMContentLoaded", () => {
-  const logo = document.getElementById("logo");
-  const mainContent = document.getElementById("main-content");
-  const leftPanel = document.getElementById("left-panel");
+window.addEventListener('DOMContentLoaded', () => {
+  const mainContent = document.getElementById('main-content');
 
-  // Показать логотип с анимацией
+  // Ждём окончания анимации логотипа
   setTimeout(() => {
-    logo.classList.add("move-up");
-  }, 300);
-
-  // Показать контент
-  setTimeout(() => {
-    mainContent.style.opacity = "1";
-    leftPanel.classList.add("visible");
-  }, 2300); // после окончания анимации логотипа
+    mainContent.classList.remove('hidden');
+    mainContent.style.opacity = '1';
+  }, 2000);
 });
